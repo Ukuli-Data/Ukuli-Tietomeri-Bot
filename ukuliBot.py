@@ -1,3 +1,8 @@
+class Message:
+    def __init__(self, message, channel):
+        self.message = message
+        self.channel = channel
+
 class User:
     def __init__(self, name, userid):
         self.name = name
@@ -31,7 +36,6 @@ rasp = {
   "desc" : "Raspberry Pi on pieni tietokone joka on suosittu IoT-projekteissa."
 }
 
-
 entityDictionaries = {
   "tietomeri" : tietomeri,
   "ukuli" : ukuli,
@@ -39,3 +43,7 @@ entityDictionaries = {
   "arduino" : arduino,
   "rasp" : rasp,
 }
+
+for entity in entities:
+    if entity in Message.message:
+        
